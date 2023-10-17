@@ -11,19 +11,17 @@
 <section class="m-5">
   <div class="row g-4">
     <div class="col-md-5">
-      <app-img-carousel></app-img-carousel>
+      <app-img-carousel [allImgs]="data?.product.imgs"></app-img-carousel>
     </div>
 
     <div class="col-md-7">
       <div class="sticky-top">
-        <app-stars-rank [rank]="4" [reviews]="950" [show]="true"></app-stars-rank>
+        <app-stars-rank [rank]="data?.reviews.rank" [reviews]="data?.reviews.nrReviews" [show]="true"></app-stars-rank>
 
-        <h1>Product</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio adipisci quas illum, sequi dicta praesentium
-          quo
-          aut, debitis sapiente harum dolor illo dignissimos, voluptatibus unde facere fugit sint. Laudantium, ut.</p>
-        <p class="h3"><strong>$79.99</strong></p>
-        <p>Tax included. Free Shipping.</p>
+        <h1>{{data?.product.name}}</h1>
+        <p>{{data?.product.description}}</p>
+        <p class="h3"><strong>${{data?.product.price}}</strong></p>
+        <p>{{data?.product.note}}</p>
         <div class="form-outline">
           <label class="form-label" for="typeNumber">Quantity</label>
           <input type="number" id="typeNumber" class="form-control"[(ngModel)]="quantity" name="quantity" />
@@ -40,49 +38,22 @@
     <h2 class="text-center">More Information Below!</h2>
 
     <div class="mt-5 accordion accordion-flush" id="accordionFlushExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingOne">
+      <div *ngFor="let item of data?.moreInfo; let index = index" class="accordion-item">
+        <h2 class="accordion-header" id="flush-heading{{index}}">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-            Accordion Item #1
+            [attr.data-bs-target]="'#flush-collapse' + index" aria-expanded="false" [attr.aria-controls]="'flush-collapse' + index">
+            {{item.title}}
           </button>
         </h2>
-        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne">
-          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
-            <code>.accordion-flush</code> class. This is the first item's accordion body.
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-            Accordion Item #2
-          </button>
-        </h2>
-        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo">
-          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
-            <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being
-            filled with some actual content.
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-            Accordion Item #3
-          </button>
-        </h2>
-        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree">
-          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
-            <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting
-            happening here in terms of content, but just filling up the space to make it look, at least at first glance,
-            a bit more representative of how this would look in a real-world application.
+        <div [id]="'flush-collapse' + index" class="accordion-collapse collapse" [attr.aria-labelledby]="'flush-heading' + index">
+          <div class="accordion-body">
+            <p>{{item.description}}</p>
           </div>
         </div>
       </div>
     </div>
+    
+
   </div>
 
   <!-- produc details  -->
@@ -91,50 +62,20 @@
 
     <div class="mt-5">
       <div class="row justify-content-md-center g-4">
-        <div class="col-md-4">
+
+        <div *ngFor="let item of data?.details" class="col-md-4">
           <div class="p-4 bg-light rounded">
             <div class="img-container">
               <img class="img-fluid rounded"
-                src="https://imgmedia.lbb.in/media/2020/06/5ee6ff35fbf0fe7a8f08fbce_1592196917352.jpg" alt="Product">
+                [src]="item.img" alt="Product">
             </div>
             <div class="mt-4">
-              <h3>Title</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis itaque beatae aliquid minima
-                suscipit id expedita quaerat ipsa debitis illo sequi officiis tenetur, magnam error, magni autem libero
-                iure deserunt?</p>
+              <h3>{{item.title}}</h3>
+              <p>{{item.description}}</p>
             </div>
           </div>
         </div>
 
-        <div class="col-md-4">
-          <div class="p-4 bg-light rounded">
-            <div class="img-container">
-              <img class="img-fluid rounded"
-                src="https://imgmedia.lbb.in/media/2020/06/5ee6ff35fbf0fe7a8f08fbce_1592196917352.jpg" alt="Product">
-            </div>
-            <div class="mt-4">
-              <h3>Title</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis itaque beatae aliquid minima
-                suscipit id expedita quaerat ipsa debitis illo sequi officiis tenetur, magnam error, magni autem libero
-                iure deserunt?</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="p-4 bg-light rounded">
-            <div class="img-container">
-              <img class="img-fluid rounded"
-                src="https://imgmedia.lbb.in/media/2020/06/5ee6ff35fbf0fe7a8f08fbce_1592196917352.jpg" alt="Product">
-            </div>
-            <div class="mt-4">
-              <h3>Title</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis itaque beatae aliquid minima
-                suscipit id expedita quaerat ipsa debitis illo sequi officiis tenetur, magnam error, magni autem libero
-                iure deserunt?</p>
-            </div>
-          </div>
-        </div>
       </div>
 
     </div>
@@ -150,42 +91,19 @@
       <div class="mt-2">
         <div class="row g-4">
 
-          <div class="col-md-4">
+          <div *ngFor="let item of data?.reviews.list" class="col-md-4">
             <div class="border rounded">
               <div class="img-container">
                 <img class="img-fluid"
-                  src="https://imgmedia.lbb.in/media/2020/06/5ee6ff35fbf0fe7a8f08fbce_1592196917352.jpg"
+                  [src]="item.img"
                   alt="review image">
               </div>
               <div class="p-4">
-                <h3>Person Name</h3>
-                <p class="m-0 text-secondary">17/10/2023</p>
-                <app-stars-rank [rank]="4"></app-stars-rank>
+                <h3>{{item.name}}</h3>
+                <p class="m-0 text-secondary">{{item.date}}</p>
+                <app-stars-rank [rank]="item.rank"></app-stars-rank>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis itaque beatae aliquid minima
-                  suscipit id expedita quaerat ipsa debitis illo sequi officiis tenetur, magnam error, magni autem
-                  libero
-                  iure deserunt?</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="border rounded">
-              <div class="img-container">
-                <img class="img-fluid"
-                  src="https://imgmedia.lbb.in/media/2020/06/5ee6ff35fbf0fe7a8f08fbce_1592196917352.jpg"
-                  alt="review image">
-              </div>
-              <div class="p-4">
-                <h3>Person Name</h3>
-                <p class="m-0 text-secondary">17/10/2023</p>
-                <app-stars-rank [rank]="5"></app-stars-rank>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis itaque beatae aliquid minima
-                  suscipit id expedita quaerat ipsa debitis illo sequi officiis tenetur, magnam error, magni autem
-                  libero
-                  iure deserunt?</p>
+                <p>{{item.description}}</p>
               </div>
             </div>
           </div>
