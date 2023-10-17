@@ -1,0 +1,201 @@
+<div class="bg-danger">
+  <p class="text-white text-center"><strong>Free Shipping On All Orders!</strong></p>
+</div>
+
+<div class="mt-4">
+  <div class="d-flex justify-content-center">
+    <img src="../../../assets/logo.png" alt="logo" height="100">
+  </div>
+</div>
+
+<section class="m-5">
+  <div class="row g-4">
+    <div class="col-md-5">
+      <app-img-carousel></app-img-carousel>
+    </div>
+
+    <div class="col-md-7">
+      <div class="sticky-top">
+        <app-stars-rank [rank]="4" [reviews]="950" [show]="true"></app-stars-rank>
+
+        <h1>Product</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio adipisci quas illum, sequi dicta praesentium
+          quo
+          aut, debitis sapiente harum dolor illo dignissimos, voluptatibus unde facere fugit sint. Laudantium, ut.</p>
+        <p class="h3"><strong>$79.99</strong></p>
+        <p>Tax included. Free Shipping.</p>
+        <div class="form-outline">
+          <label class="form-label" for="typeNumber">Quantity</label>
+          <input type="number" id="typeNumber" class="form-control"[(ngModel)]="quantity" name="quantity" />
+        </div>
+        <div class="mt-4">
+          <button (click)="buy()" type="button" class="btn btn-danger w-100"><strong>Buy Now</strong></button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="mt-5 p-5 bg-more-informattion rounded">
+    <h2 class="text-center">More Information Below!</h2>
+
+    <div class="mt-5 accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            Accordion Item #1
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne">
+          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+            <code>.accordion-flush</code> class. This is the first item's accordion body.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            Accordion Item #2
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo">
+          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+            <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being
+            filled with some actual content.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            Accordion Item #3
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree">
+          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+            <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting
+            happening here in terms of content, but just filling up the space to make it look, at least at first glance,
+            a bit more representative of how this would look in a real-world application.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- produc details  -->
+  <div class="mt-5">
+    <h2 class="text-center">Product Details</h2>
+
+    <div class="mt-5">
+      <div class="row justify-content-md-center g-4">
+        <div class="col-md-4">
+          <div class="p-4 bg-light rounded">
+            <div class="img-container">
+              <img class="img-fluid rounded"
+                src="https://imgmedia.lbb.in/media/2020/06/5ee6ff35fbf0fe7a8f08fbce_1592196917352.jpg" alt="Product">
+            </div>
+            <div class="mt-4">
+              <h3>Title</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis itaque beatae aliquid minima
+                suscipit id expedita quaerat ipsa debitis illo sequi officiis tenetur, magnam error, magni autem libero
+                iure deserunt?</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-4 bg-light rounded">
+            <div class="img-container">
+              <img class="img-fluid rounded"
+                src="https://imgmedia.lbb.in/media/2020/06/5ee6ff35fbf0fe7a8f08fbce_1592196917352.jpg" alt="Product">
+            </div>
+            <div class="mt-4">
+              <h3>Title</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis itaque beatae aliquid minima
+                suscipit id expedita quaerat ipsa debitis illo sequi officiis tenetur, magnam error, magni autem libero
+                iure deserunt?</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-4 bg-light rounded">
+            <div class="img-container">
+              <img class="img-fluid rounded"
+                src="https://imgmedia.lbb.in/media/2020/06/5ee6ff35fbf0fe7a8f08fbce_1592196917352.jpg" alt="Product">
+            </div>
+            <div class="mt-4">
+              <h3>Title</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis itaque beatae aliquid minima
+                suscipit id expedita quaerat ipsa debitis illo sequi officiis tenetur, magnam error, magni autem libero
+                iure deserunt?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- reviews section  -->
+  <div class="mt-5">
+    <h2 class="text-center">Reviews</h2>
+
+    <div class="mt-5">
+      <app-stars-rank [rank]="4" [reviews]="950" [show]="true"></app-stars-rank>
+
+      <div class="mt-2">
+        <div class="row g-4">
+
+          <div class="col-md-4">
+            <div class="border rounded">
+              <div class="img-container">
+                <img class="img-fluid"
+                  src="https://imgmedia.lbb.in/media/2020/06/5ee6ff35fbf0fe7a8f08fbce_1592196917352.jpg"
+                  alt="review image">
+              </div>
+              <div class="p-4">
+                <h3>Person Name</h3>
+                <p class="m-0 text-secondary">17/10/2023</p>
+                <app-stars-rank [rank]="4"></app-stars-rank>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis itaque beatae aliquid minima
+                  suscipit id expedita quaerat ipsa debitis illo sequi officiis tenetur, magnam error, magni autem
+                  libero
+                  iure deserunt?</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="border rounded">
+              <div class="img-container">
+                <img class="img-fluid"
+                  src="https://imgmedia.lbb.in/media/2020/06/5ee6ff35fbf0fe7a8f08fbce_1592196917352.jpg"
+                  alt="review image">
+              </div>
+              <div class="p-4">
+                <h3>Person Name</h3>
+                <p class="m-0 text-secondary">17/10/2023</p>
+                <app-stars-rank [rank]="5"></app-stars-rank>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis itaque beatae aliquid minima
+                  suscipit id expedita quaerat ipsa debitis illo sequi officiis tenetur, magnam error, magni autem
+                  libero
+                  iure deserunt?</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<app-footer></app-footer>

@@ -1,0 +1,18 @@
+<div class="img-container d-flex justify-content-center">
+  <img class="img-fluid rounded" [src]="imgs[imgSelected]" alt="Product">
+</div>
+<div>
+  <div class="mt-2 d-flex justify-content-between">
+    <button *ngIf="showLeft" (click)="previous()" type="button" class="btn btn-light p-0 me-2"><i class="bi bi-chevron-compact-left"></i></button>
+
+    <div class="row g-2">
+      <div *ngFor="let img of imgs; let index = index" class="col-3">
+        <div class="img-container" [ngClass]="{'my-selected-border rounded': imgSelected === index}" role="button" (click)="select(index)">
+          <img class="img-fluid rounded" [src]="img" alt="Product">
+        </div>
+      </div>
+    </div>
+
+    <button *ngIf="showRight" (click)="next()" type="button" class="btn btn-light p-0 ms-2"><i class="bi bi-chevron-compact-right"></i></button>
+  </div>
+</div>
