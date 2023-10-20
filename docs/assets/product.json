@@ -1,0 +1,66 @@
+{
+    "product": {
+        "name": "Product",
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio adipisci quas illum, sequi dicta praesentium quo aut, debitis sapiente harum dolor illo dignissimos, voluptatibus unde facere fugit sint. Laudantium, ut.",
+        "price": 79.99,
+        "note": "Tax included. Free Shipping.",
+        "imgs": [
+            "https://imgmedia.lbb.in/media/2020/06/5ee6ff35fbf0fe7a8f08fbce_1592196917352.jpg", 
+            "https://imgmedia.lbb.in/media/2020/06/5ee6ff35fbf0fe7a8f08fbce_1592196917352.jpg", 
+            "https://imgmedia.lbb.in/media/2020/06/5ee6ff35fbf0fe7a8f08fbce_1592196917352.jpg", 
+            "https://imgmedia.lbb.in/media/2020/06/5ee6ff35fbf0fe7a8f08fbce_1592196917352.jpg", 
+            "https://png.pngtree.com/png-vector/20220812/ourmid/pngtree-cute-shit-clipart-with-happy-face-png-image_6107578.png"
+        ]
+    },
+    "moreInfo": [
+        {
+            "title": "Accordion Item #1",
+            "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio adipisci quas illum, sequi dicta praesentium quo aut, debitis sapiente harum dolor illo dignissimos, voluptatibus unde facere fugit sint. Laudantium, ut."
+        },
+        {
+            "title": "Accordion Item #2",
+            "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio adipisci quas illum, sequi dicta praesentium quo aut, debitis sapiente harum dolor illo dignissimos, voluptatibus unde facere fugit sint. Laudantium, ut."
+        },
+        {
+            "title": "Accordion Item #3",
+            "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio adipisci quas illum, sequi dicta praesentium quo aut, debitis sapiente harum dolor illo dignissimos, voluptatibus unde facere fugit sint. Laudantium, ut."
+        }
+    ],
+    "details": [
+        {
+            "img": "https://imgmedia.lbb.in/media/2020/06/5ee6ff35fbf0fe7a8f08fbce_1592196917352.jpg",
+            "title": "Title #1",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis itaque beatae aliquid minima suscipit id expedita quaerat ipsa debitis illo sequi officiis tenetur, magnam error, magni autem libero iure deserunt?"
+        },
+        {
+            "img": "https://imgmedia.lbb.in/media/2020/06/5ee6ff35fbf0fe7a8f08fbce_1592196917352.jpg",
+            "title": "Title #2",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis itaque beatae aliquid minima suscipit id expedita quaerat ipsa debitis illo sequi officiis tenetur, magnam error, magni autem libero iure deserunt?"
+        },
+        {
+            "img": "https://imgmedia.lbb.in/media/2020/06/5ee6ff35fbf0fe7a8f08fbce_1592196917352.jpg",
+            "title": "Title #3",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis itaque beatae aliquid minima suscipit id expedita quaerat ipsa debitis illo sequi officiis tenetur, magnam error, magni autem libero iure deserunt?"
+        }
+    ],
+    "reviews": {
+        "rank": 4,
+        "nrReviews": 950,
+        "list": [
+            {
+                "img": "https://imgmedia.lbb.in/media/2020/06/5ee6ff35fbf0fe7a8f08fbce_1592196917352.jpg",
+                "name": "Person Name",
+                "date": "17/10/2023",
+                "rank": 4,
+                "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis itaque beatae aliquid minima suscipit id expedita quaerat ipsa debitis illo sequi officiis tenetur, magnam error, magni autem libero iure deserunt?"
+            },
+            {
+                "img": "https://imgmedia.lbb.in/media/2020/06/5ee6ff35fbf0fe7a8f08fbce_1592196917352.jpg",
+                "name": "Person Name",
+                "date": "17/10/2023",
+                "rank": 4,
+                "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis itaque beatae aliquid minima suscipit id expedita quaerat ipsa debitis illo sequi officiis tenetur, magnam error, magni autem libero iure deserunt?"
+            }
+        ]
+    }
+}
