@@ -9,7 +9,7 @@ export class ProductService {
   constructor(private http: HttpClient) {}
 
   getProduct() {
-    return this.http.get('/assets/product.json');
+    return this.http.get('assets/product.json');
   }
   
 }

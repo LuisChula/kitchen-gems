@@ -10,7 +10,7 @@ import { ProductComponent } from './pages/product/product.component';
 import { StarsRankComponent } from './components/stars-rank/stars-rank.component';
 import { ImgCarouselComponent } from './components/img-carousel/img-carousel.component';
 import { FormsModule } from '@angular/forms';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
