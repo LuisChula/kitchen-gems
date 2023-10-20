@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, Renderer2, AfterViewInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -6,13 +6,13 @@ import { ProductService } from 'src/app/services/product.service';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
-export class ProductComponent implements OnInit{
+export class ProductComponent implements OnInit {
 
   quantity: number = 1;
   data: any;
   moreInfo: any[] = [];
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService, private el: ElementRef, private renderer: Renderer2) {}
 
   ngOnInit() {
     this.productService.getProduct().subscribe((data) => {

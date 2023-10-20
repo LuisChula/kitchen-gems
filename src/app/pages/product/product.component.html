@@ -1,15 +1,9 @@
-<div class="bg-danger">
-  <p class="text-white text-center"><strong>Free Shipping On All Orders!</strong></p>
-</div>
-
-<div class="mt-4">
-  <div class="d-flex justify-content-center">
-    <img src="assets/logo.png" alt="logo" height="100">
-  </div>
-</div>
+<app-header></app-header>
 
 <section class="m-5">
-  <div class="row g-4">
+  
+  <!-- buy product  -->
+  <div id="mySection" class="row g-4">
     <div class="col-md-5">
       <app-img-carousel [allImgs]="data?.product.imgs"></app-img-carousel>
     </div>
@@ -34,6 +28,7 @@
     </div>
   </div>
 
+  <!-- more information  -->
   <div class="mt-5 p-5 bg-more-informattion rounded">
     <h2 class="text-center">More Information Below!</h2>
 
@@ -52,8 +47,6 @@
         </div>
       </div>
     </div>
-    
-
   </div>
 
   <!-- produc details  -->

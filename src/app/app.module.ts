@@ -11,6 +11,8 @@ import { StarsRankComponent } from './components/stars-rank/stars-rank.component
 import { ImgCarouselComponent } from './components/img-carousel/img-carousel.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './pages/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FooterComponent } from './components/footer/footer.component';
     ProductComponent,
     StarsRankComponent,
     ImgCarouselComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +30,10 @@ import { FooterComponent } from './components/footer/footer.component';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+// {provide: LocationStrategy, useClass: HashLocationStrategy}
