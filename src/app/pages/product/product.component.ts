@@ -1,4 +1,5 @@
 import { Component, OnInit, ElementRef, Renderer2, AfterViewInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -12,17 +13,29 @@ export class ProductComponent implements OnInit {
   data: any;
   moreInfo: any[] = [];
 
-  constructor(private productService: ProductService, private el: ElementRef, private renderer: Renderer2) {}
+  constructor(private productService: ProductService, private route: ActivatedRoute, private el: ElementRef, private renderer: Renderer2) { }
 
   ngOnInit() {
-    this.productService.getProduct().subscribe((data) => {
+    let id = this.route.snapshot.paramMap.get('id');
+    if (id !== null) {
+      this.getProduct(id);
+    }
+  }
+
+  getProduct(id: string) {
+    this.productService.getProduct(id).subscribe((data) => {
       this.data = data;
-      console.log(this.data);
     });
   }
 
   buy() {
-    alert("Bought " + this.quantity + " item(s)");
+    if (this.isValidQuantity(this.quantity)) {
+      alert("Bought " + this.quantity + " item(s)");
+    }
+  }
+
+  isValidQuantity(value: number): boolean {
+    return value != null && /^\d+$/.test(value.toString()) && value > 0;
   }
 
 }

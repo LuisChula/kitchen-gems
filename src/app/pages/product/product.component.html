@@ -1,6 +1,6 @@
 <app-header></app-header>
 
-<section class="m-5">
+<main class="m-sm-5 m-3">
   
   <!-- buy product  -->
   <div id="mySection" class="row g-4">
@@ -16,20 +16,28 @@
         <p>{{data?.product.description}}</p>
         <p class="h3"><strong>${{data?.product.price}}</strong></p>
         <p>{{data?.product.note}}</p>
-        <div class="form-outline">
-          <label class="form-label" for="typeNumber">Quantity</label>
-          <input type="number" id="typeNumber" class="form-control"[(ngModel)]="quantity" name="quantity" />
-        </div>
-        <div class="mt-4">
-          <button (click)="buy()" type="button" class="btn btn-danger w-100"><strong>Buy Now</strong></button>
-        </div>
+
+        <form (ngSubmit)="buy()">
+          <div class="form-group">
+            <div class="form-outline">
+              <label class="form-label" for="typeNumber">Quantity</label>
+              <input type="number" inputmode="numeric" min="1" step="1" id="typeNumber" class="form-control" [(ngModel)]="quantity" name="quantity" required/>
+            </div>
+            <div *ngIf="!isValidQuantity(quantity)" class="text-danger">Please enter a valid quantity. The quantity must be an integer greater than 0 and should not contain decimal values.</div>
+            <div class="mt-4">
+              <button type="submit" class="btn btn-danger w-100" [disabled]="!isValidQuantity(quantity)"><strong>Buy Now</strong></button>
+            </div>
+          </div>
+        </form>
+        
+        
       </div>
 
     </div>
   </div>
 
   <!-- more information  -->
-  <div class="mt-5 p-5 bg-more-informattion rounded">
+  <div class="mt-5 p-sm-5 p-4 bg-more-informattion rounded">
     <h2 class="text-center">More Information Below!</h2>
 
     <div class="mt-5 accordion accordion-flush" id="accordionFlushExample">
@@ -107,6 +115,6 @@
 
   </div>
 
-</section>
+</main>
 
 <app-footer></app-footer>

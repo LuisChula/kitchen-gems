@@ -1,39 +1,51 @@
+.bg-img-1 {
+  background-image: url('https://graceinmyspace.com/wp-content/uploads/2021/11/christmas-kitchen-ideas-feature.jpg');
+}
+
+.bg-img-2 {
+  background-image: url('https://hips.hearstapps.com/hmg-prod/images/christmas-kitchen-decorations-wreaths-1638829935.jpg');
+}
+
+.bg-img-3 {
+  background-image: url('https://www.howdens.com/-/media/howdens/assets/clh_asset_corporate/clh_asset_levela_109324/clh_asset_levelb_25289732/clh_asset_levelc_25409893/ass_25416799.jpg');
+}
+
+.my-carousel-image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
 .my-container {
-    position: relative;
-    width: 50%;
-  }
-  
-  .image {
-    opacity: 1;
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: .5s ease;
-    backface-visibility: hidden;
-  }
-  
-  .middle {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  
-  .my-container:hover .image {
-    opacity: 0.3;
-  }
-  
-  .my-container:hover .middle {
-    opacity: 1;
-  }
-  
-  .text {
-    background-color: red;
-    color: white;
-    font-size: 16px;
-    padding: 16px 32px;
-  }
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.my-container:hover .image {
+  opacity: 0.3;
+}
+
+.my-container:hover .middle {
+  opacity: 1;
+}
