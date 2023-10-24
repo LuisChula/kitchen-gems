@@ -17,7 +17,7 @@
         <p class="h3"><strong>${{data?.product.price}}</strong></p>
         <p>{{data?.product.note}}</p>
 
-        <form (ngSubmit)="buy()">
+        <!-- <form (ngSubmit)="buy()">
           <div class="form-group">
             <div class="form-outline">
               <label class="form-label" for="typeNumber">Quantity</label>
@@ -28,7 +28,9 @@
               <button type="submit" class="btn btn-danger w-100" [disabled]="!isValidQuantity(quantity)"><strong>Buy Now</strong></button>
             </div>
           </div>
-        </form>
+        </form> -->
+
+        <a class="btn btn-danger w-100" href="https://buy.stripe.com/8wM17AaOA4JabF69AA" role="button"><strong>Buy Now</strong></a>
         
         
       </div>
