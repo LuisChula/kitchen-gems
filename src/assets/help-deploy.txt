@@ -1,1 +1,18 @@
 ng build --output-path docs --base-href /kitchen-gems/
+
+adicionar no app-routing:
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes,
+    {
+      scrollPositionRestoration: 'top',
+      useHash: true,
+    })],
+  exports: [RouterModule]
+})
+
+adicionar no app.modules:
+providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+
+user paths desta forma:
+<a class="nav-link" [href]="'#/properties'"><strong>Imóveis</strong></a>
